@@ -10,3 +10,6 @@ pre-built/linux/
 *.log
 project-spec/meta-plnx-generated/
 /components/plnx_workspace
+hardware/xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.cache/
+hardware/xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.ip_user_files/
+hardware/xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.hw/xilinx-ultra96-reva-2018.2.lpr
