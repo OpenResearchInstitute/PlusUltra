@@ -10162,11 +10162,11 @@ set psu_mio_init_data {
     # lk_out- (SPI Clock) 5= ttc3, Input, ttc3_clk_in- (TTC Clock) 6= ua1, Out
     # put, ua1_txd- (UART transmitter serial output) 7= trace, Output, trace_c
     # lk- (Trace Port Clock)
-		# PSU_IOU_SLCR_MIO_PIN_0_L3_SEL                                                   0
+		# PSU_IOU_SLCR_MIO_PIN_0_L3_SEL                                                   6
 
 		# Configures MIO Pin 0 peripheral interface mapping. S
-		#(OFFSET, MASK, VALUE)      (0XFF180000, 0x000000FEU ,0x00000000U)  */
-    mask_write 0XFF180000 0x000000FE 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF180000, 0x000000FEU ,0x000000C0U)  */
+    mask_write 0XFF180000 0x000000FE 0x000000C0
 		# Register : MIO_PIN_1 @ 0XFF180004</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Input, qspi_mi_mi1- (Q
@@ -10189,11 +10189,11 @@ set psu_mio_init_data {
     # tput, ttc3_wave_out- (TTC Waveform Clock) 6= ua1, Input, ua1_rxd- (UART
     # receiver serial input) 7= trace, Output, trace_ctl- (Trace Port Control
     # Signal)
-		# PSU_IOU_SLCR_MIO_PIN_1_L3_SEL                                                   0
+		# PSU_IOU_SLCR_MIO_PIN_1_L3_SEL                                                   6
 
 		# Configures MIO Pin 1 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180004, 0x000000FEU ,0x00000000U)  */
-    mask_write 0XFF180004 0x000000FE 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF180004, 0x000000FEU ,0x000000C0U)  */
+    mask_write 0XFF180004 0x000000FE 0x000000C0
 		# Register : MIO_PIN_2 @ 0XFF180008</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Input, qspi_mi2- (QSPI
@@ -12286,7 +12286,7 @@ set psu_mio_init_data {
 		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_00_TRI                                            0
 
 		# Master Tri-state Enable for pin 1, active high
-		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_01_TRI                                            0
+		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_01_TRI                                            1
 
 		# Master Tri-state Enable for pin 2, active high
 		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_02_TRI                                            1
@@ -12379,8 +12379,8 @@ set psu_mio_init_data {
 		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_31_TRI                                            0
 
 		# MIO pin Tri-state Enables, 31:0
-		#(OFFSET, MASK, VALUE)      (0XFF180204, 0xFFFFFFFFU ,0x55000004U)  */
-    mask_write 0XFF180204 0xFFFFFFFF 0x55000004
+		#(OFFSET, MASK, VALUE)      (0XFF180204, 0xFFFFFFFFU ,0x55000006U)  */
+    mask_write 0XFF180204 0xFFFFFFFF 0x55000006
 		# Register : MIO_MST_TRI1 @ 0XFF180208</p>
 
 		# Master Tri-state Enable for pin 32, active high

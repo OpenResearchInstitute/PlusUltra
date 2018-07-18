@@ -11871,12 +11871,12 @@ unsigned long psu_mio_init_data(void)
     * lk_out- (SPI Clock) 5= ttc3, Input, ttc3_clk_in- (TTC Clock) 6= ua1, Out
     * put, ua1_txd- (UART transmitter serial output) 7= trace, Output, trace_c
     * lk- (Trace Port Clock)
-    *  PSU_IOU_SLCR_MIO_PIN_0_L3_SEL                               0
+    *  PSU_IOU_SLCR_MIO_PIN_0_L3_SEL                               6
 
     * Configures MIO Pin 0 peripheral interface mapping. S
-    * (OFFSET, MASK, VALUE)      (0XFF180000, 0x000000FEU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFF180000, 0x000000FEU ,0x000000C0U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_0_OFFSET, 0x000000FEU, 0x00000000U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_0_OFFSET, 0x000000FEU, 0x000000C0U);
 /*##################################################################### */
 
     /*
@@ -11902,12 +11902,12 @@ unsigned long psu_mio_init_data(void)
     * tput, ttc3_wave_out- (TTC Waveform Clock) 6= ua1, Input, ua1_rxd- (UART
     * receiver serial input) 7= trace, Output, trace_ctl- (Trace Port Control
     * Signal)
-    *  PSU_IOU_SLCR_MIO_PIN_1_L3_SEL                               0
+    *  PSU_IOU_SLCR_MIO_PIN_1_L3_SEL                               6
 
     * Configures MIO Pin 1 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF180004, 0x000000FEU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFF180004, 0x000000FEU ,0x000000C0U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_1_OFFSET, 0x000000FEU, 0x00000000U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_1_OFFSET, 0x000000FEU, 0x000000C0U);
 /*##################################################################### */
 
     /*
@@ -14303,7 +14303,7 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_00_TRI                        0
 
     * Master Tri-state Enable for pin 1, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_01_TRI                        0
+    *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_01_TRI                        1
 
     * Master Tri-state Enable for pin 2, active high
     *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_02_TRI                        1
@@ -14396,10 +14396,10 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_31_TRI                        0
 
     * MIO pin Tri-state Enables, 31:0
-    * (OFFSET, MASK, VALUE)      (0XFF180204, 0xFFFFFFFFU ,0x55000004U)
+    * (OFFSET, MASK, VALUE)      (0XFF180204, 0xFFFFFFFFU ,0x55000006U)
     */
 	PSU_Mask_Write(IOU_SLCR_MIO_MST_TRI0_OFFSET,
-		0xFFFFFFFFU, 0x55000004U);
+		0xFFFFFFFFU, 0x55000006U);
 /*##################################################################### */
 
     /*
