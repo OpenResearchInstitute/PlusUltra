@@ -226,3 +226,4 @@ CONFIG_YOCTO_NETWORK_SSTATE_FEEDS_URL="http://petalinux.xilinx.com/sswreleases/r
 #
 CONFIG_USER_LAYER_0="${proot}/project-spec/meta-sdr"
 CONFIG_USER_LAYER_1=""
+CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="earlycon clk_ignore_unused root=/dev/mmcblk0p2 rw rootwait"
