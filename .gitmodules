@@ -1,0 +1,4 @@
+[submodule "project-spec/meta-sdr"]
+	path = project-spec/meta-sdr
+	url = https://github.com/jschiefer/meta-sdr.git
+	branch = rocko-p4g

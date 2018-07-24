@@ -4390,6 +4390,7 @@ CONFIG_packagegroup-petalinux-x11=y
 #
 CONFIG_libftdi=y
 CONFIG_cmake=y
+CONFIG_gnuradio=y
 CONFIG_iperf3=y
 CONFIG_lmsensors-sensorsdetect=y
 CONFIG_packagegroup-base-extended=y
