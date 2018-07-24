@@ -1,7 +1,7 @@
 # Petalinux project for Avnet Ultra96
 This repository contains a Petalinux project (hardware and software) for the Avnet Ultra96 board. It consists of a Vivado hardware definition, Linux kernel, PetaLinux-based OS and assorted bootloaders, and will hopefully be a stable platform option for SDR (Software Defined Radio) experimentation.
 
-Right now, the changes from the original Xilinx SDK image are:
+Right now, the changes from the original Xilinx Ultra96 BSP image are:
 * Rewired the console port to come out of the console connector
 * Added drivers for some popular Realtek-based USB Ethernet dongles (so you can use Ethernet, or even TFTP-boot!)
 * Added gnuradio (currently at version 3.12.0, but that will change), including UHD.
