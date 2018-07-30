@@ -1463,12 +1463,11 @@ CONFIG_run-postinsts=y
 #
 # gtk+ 
 #
-# CONFIG_gtkPLUS is not set
-# CONFIG_gtkPLUS-dev is not set
+CONFIG_gtkPLUS=y
 # CONFIG_libgail is not set
 # CONFIG_gtkPLUS-dbg is not set
 # CONFIG_gtk-demo is not set
-
+CONFIG_gtk-demo=y
 #
 # gtk+3 
 #
