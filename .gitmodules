@@ -1,4 +1,8 @@
 [submodule "project-spec/meta-sdr"]
 	path = project-spec/meta-sdr
 	url = https://github.com/jschiefer/meta-sdr.git
-	branch = rocko-p4g
+	branch = master
+[submodule "project-spec/meta-qt5-extra"]
+	path = project-spec/meta-qt5-extra
+	url = https://github.com/schnitzeltony/meta-qt5-extra.git
+	branch = rocko
