@@ -1,7 +1,7 @@
 [submodule "project-spec/meta-sdr"]
 	path = project-spec/meta-sdr
 	url = https://github.com/jschiefer/meta-sdr.git
-	branch = master
+	branch = p4g_gr_next
 [submodule "project-spec/meta-qt5-extra"]
 	path = project-spec/meta-qt5-extra
 	url = https://github.com/schnitzeltony/meta-qt5-extra.git
