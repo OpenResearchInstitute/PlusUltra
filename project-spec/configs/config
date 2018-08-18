@@ -230,4 +230,6 @@ CONFIG_USER_LAYER_2=""
 
 
 
+
+
 CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="earlycon clk_ignore_unused root=/dev/mmcblk0p2 rw rootwait"
