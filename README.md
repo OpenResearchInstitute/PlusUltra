@@ -16,7 +16,8 @@ make sure you clone this repository using the `--recursive` git option, as this 
 You need Xilinx Vivado 2018.2 for this part. Open the project `hardware/xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.xpr`, and make any changes you desire. Build the bitstream. If it is successful, you want to export the hardware definition to the default location (make sure to check the checkbox to include the bitfile). Then you can proceed to build a matching software image.
 
 ## Building the software
-You will need an installation of Petalinux 2018.2 from Xilinx (please note that this needs to be installed on a Linux machine). Please make sure you are not building this on an ecryptfs file system, as path length restrictions will probably trip you up!
+You will need an installation of Petalinux 2018.2 from Xilinx (please note that this needs to be installed on a Linux machine). Refer to the Xilinx documentation on how to do this, specifically [chapter 2 of UG1144](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_2/ug1144-petalinux-tools-reference-guide.pdf#G4.364401), which lists the installation requirements.
+Please make sure you are not building this on an ecryptfs file system, as path length restrictions will probably trip you up!
 
 * Don't forget to import the Petalinux system variables
 * Change directories to the root of the project
