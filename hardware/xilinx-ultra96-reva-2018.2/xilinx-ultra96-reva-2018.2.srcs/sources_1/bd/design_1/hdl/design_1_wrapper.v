@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Fri Jun 15 03:44:53 2018
-//Host        : xcosswbld05 running 64-bit Red Hat Enterprise Linux Workstation release 7.2 (Maipo)
+//Date        : Mon Feb  4 23:55:49 2019
+//Host        : whitebox running 64-bit Linux Mint 18.3 Sylvia
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -16,9 +16,7 @@ module design_1_wrapper
     UART0_ctsn,
     UART0_rtsn,
     UART0_rxd,
-    UART0_txd,
-    UART1_rxd,
-    UART1_txd);
+    UART0_txd);
   input BT_ctsn;
   output BT_rtsn;
   inout [5:0]GPIO_SENSORS_tri_io;
@@ -26,8 +24,6 @@ module design_1_wrapper
   output UART0_rtsn;
   input UART0_rxd;
   output UART0_txd;
-  input UART1_rxd;
-  output UART1_txd;
 
   wire BT_ctsn;
   wire BT_rtsn;
@@ -59,8 +55,6 @@ module design_1_wrapper
   wire UART0_rtsn;
   wire UART0_rxd;
   wire UART0_txd;
-  wire UART1_rxd;
-  wire UART1_txd;
 
   IOBUF GPIO_SENSORS_tri_iobuf_0
        (.I(GPIO_SENSORS_tri_o_0),
@@ -101,7 +95,5 @@ module design_1_wrapper
         .UART0_ctsn(UART0_ctsn),
         .UART0_rtsn(UART0_rtsn),
         .UART0_rxd(UART0_rxd),
-        .UART0_txd(UART0_txd),
-        .UART1_rxd(UART1_rxd),
-        .UART1_txd(UART1_txd));
+        .UART0_txd(UART0_txd));
 endmodule
