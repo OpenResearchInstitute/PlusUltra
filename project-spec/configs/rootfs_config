@@ -4270,7 +4270,7 @@ CONFIG_packagegroup-petalinux-lmsensors=y
 #
 # packagegroup-petalinux-matchbox 
 #
-CONFIG_packagegroup-petalinux-matchbox=y
+# CONFIG_packagegroup-petalinux-matchbox is not set
 # CONFIG_packagegroup-petalinux-matchbox-dbg is not set
 # CONFIG_packagegroup-petalinux-matchbox-dev is not set
 
@@ -4326,7 +4326,7 @@ CONFIG_packagegroup-petalinux-python-modules=y
 #
 # packagegroup-petalinux-qt 
 #
-CONFIG_packagegroup-petalinux-qt=y
+# CONFIG_packagegroup-petalinux-qt is not set
 # CONFIG_packagegroup-petalinux-qt-dev is not set
 # CONFIG_packagegroup-petalinux-qt-dbg is not set
 
@@ -4354,14 +4354,14 @@ CONFIG_packagegroup-petalinux-utils=y
 #
 # packagegroup-petalinux-v4lutils 
 #
-CONFIG_packagegroup-petalinux-v4lutils=y
+# CONFIG_packagegroup-petalinux-v4lutils is not set
 # CONFIG_packagegroup-petalinux-v4lutils-dbg is not set
 # CONFIG_packagegroup-petalinux-v4lutils-dev is not set
 
 #
 # packagegroup-petalinux-x11 
 #
-CONFIG_packagegroup-petalinux-x11=y
+# CONFIG_packagegroup-petalinux-x11 is not set
 # CONFIG_packagegroup-petalinux-x11-dev is not set
 # CONFIG_packagegroup-petalinux-x11-dbg is not set
 
@@ -4393,11 +4393,11 @@ CONFIG_cmake=y
 CONFIG_iperf3=y
 CONFIG_lmsensors-sensorsdetect=y
 CONFIG_packagegroup-base-extended=y
-CONFIG_packagegroup-petalinux-96boards-sensors=y
-CONFIG_packagegroup-petalinux-ultra96-webapp=y
+# CONFIG_packagegroup-petalinux-96boards-sensors is not set
+# CONFIG_packagegroup-petalinux-ultra96-webapp is not set
 CONFIG_python-pyserial=y
 CONFIG_python3-pip=y
-CONFIG_ultra96-ap-setup=y
+# CONFIG_ultra96-ap-setup is not set
 
 #
 # PetaLinux RootFS Settings
