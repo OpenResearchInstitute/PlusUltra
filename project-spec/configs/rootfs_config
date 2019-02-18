@@ -1130,7 +1130,7 @@ CONFIG_pciutils=y
 # CONFIG_python-zlib is not set
 # CONFIG_python-fcntl is not set
 # CONFIG_python-stringold is not set
-# CONFIG_python-dev is not set
+CONFIG_python-dev=y
 # CONFIG_libpython2 is not set
 # CONFIG_python-smtpd is not set
 # CONFIG_python-core is not set
@@ -1244,8 +1244,8 @@ CONFIG_run-postinsts=y
 #
 # swig 
 #
-# CONFIG_swig is not set
-# CONFIG_swig-dev is not set
+CONFIG_swig=y
+CONFIG_swig-dev=y
 # CONFIG_swig-dbg is not set
 
 #
@@ -1813,8 +1813,8 @@ CONFIG_gtk-demo=y
 #
 # libusb1 
 #
-# CONFIG_libusb1 is not set
-# CONFIG_libusb1-dev is not set
+CONFIG_libusb1=y
+CONFIG_libusb1-dev=y
 # CONFIG_libusb1-dbg is not set
 
 #
@@ -2243,9 +2243,9 @@ CONFIG_gtk-demo=y
 #
 # sqlite3 
 #
-# CONFIG_sqlite3 is not set
-# CONFIG_libsqlite3 is not set
-# CONFIG_libsqlite3-dev is not set
+CONFIG_sqlite3=y
+CONFIG_libsqlite3=y
+CONFIG_libsqlite3-dev=y
 # CONFIG_sqlite3-dbg is not set
 
 #
@@ -2964,7 +2964,7 @@ CONFIG_packagegroup-core-ssh-dropbear=y
 # CONFIG_python3-enum is not set
 # CONFIG_python3-image is not set
 # CONFIG_python3-difflib is not set
-# CONFIG_python3-dev is not set
+CONFIG_python3-dev=y
 # CONFIG_python3-signal is not set
 # CONFIG_python3-syslog is not set
 # CONFIG_python3-man is not set
