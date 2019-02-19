@@ -4,7 +4,9 @@ This repository contains a Petalinux project (hardware and software) for the Avn
 Right now, the changes from the original Xilinx Ultra96 BSP image are:
 * Rewired the console port to come out of the console connector
 * Added drivers for some popular Realtek-based USB Ethernet dongles (so you can use Ethernet, or even TFTP-boot!)
-* Added gnuradio (version 3.7.13.4), including UHD.
+* Applied the Xilinx fix for the power button not turning the machine off (AR71722)
+* Add sshd, Python3, SWIG, Sqlite, VFIO
+* Remove a bunch of demo software
 
 # What's with the name?
 PlusUltra is the negation of "Non plus ultra" (which means for "Nothing further beyond"). It is also the national motto of Spain.
