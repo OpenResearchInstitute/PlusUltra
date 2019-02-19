@@ -7,6 +7,9 @@ Right now, the changes from the original Xilinx Ultra96 BSP image are:
 * Applied the Xilinx fix for the power button not turning the machine off (AR71722)
 * Add sshd, Python3, SWIG, Sqlite, VFIO
 * Remove a bunch of demo software
+* Coming soon: fan speed control! This thing is way too loud.
+* Coming soon: make this into a platform for SDSoC (if I can figure it out)
+* Coming soon: Binaries, so anybody can try this out without 10s of GB of downloads, hours of computation and gobs of disk space.
 
 # What's with the name?
 PlusUltra is the negation of "Non plus ultra" (which means for "Nothing further beyond"). It is also the national motto of Spain.
