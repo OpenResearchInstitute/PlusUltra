@@ -13,9 +13,13 @@ PlusUltra is the negation of "Non plus ultra" (which means for "Nothing further 
 make sure you clone this repository using the `--recursive` git option, as this project contains a git submodule. Forgot to do that? No problem, just run `git submodule update --recursive` from a command line, which will take care of updating the submodule.
 
 ## Building the hardware project
-You need Xilinx Vivado 2018.2 for this part. Open the project `hardware/xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.xpr`, and make any changes you desire. Build the bitstream. If it is successful, you want to export the hardware definition to the default location (make sure to check the checkbox to include the bitfile). Then you can proceed to build a matching software image.
+You need Xilinx Vivado 2018.3 for this part. Open the project `hardware/xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.xpr`, and make any changes you desire. Build the bitstream. If it is successful, you want to export the hardware definition to the default location (make sure to check the checkbox to include the bitfile). Then you can proceed to build a matching software image.
 
 ## Building the software
+Note that this system is in transition right now. Vivado 2018.*3* is used for building the 
+hardware, while Petalinux 2018.*2* is used for the software. This will hopefully change
+soon, along with the confusing version-related naming of the files and directories.
+
 You will need an installation of Petalinux 2018.2 from Xilinx (please note that this needs to be installed on a Linux machine). Refer to the Xilinx documentation on how to do this, specifically [chapter 2 of UG1144](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_2/ug1144-petalinux-tools-reference-guide.pdf#G4.364401), which lists the installation requirements.
 Please make sure you are not building this on an ecryptfs file system, as path length restrictions will probably trip you up!
 

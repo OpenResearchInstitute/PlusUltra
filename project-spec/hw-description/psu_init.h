@@ -1,6 +1,6 @@
 /******************************************************************************
 *
-* Copyright (C) 2015 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2018 Xilinx, Inc.  All rights reserved.
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -11,10 +11,6 @@
 *
 * The above copyright notice and this permission notice shall be included in
 * all copies or substantial portions of the Software.
-*
-* Use of the Software is limited solely to applications:
-* (a) running on a Xilinx device, or
-* (b) that interact with a Xilinx device through a bus or interconnect.
 *
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -33744,6 +33740,12 @@
 #define IOU_SCNTRS_BASE_FREQUENCY_ID_REGISTER_OFFSET                               0XFF260020
 #undef IOU_SCNTRS_COUNTER_CONTROL_REGISTER_OFFSET 
 #define IOU_SCNTRS_COUNTER_CONTROL_REGISTER_OFFSET                                 0XFF260000
+#undef CRL_APB_BOOT_PIN_CTRL_OFFSET 
+#define CRL_APB_BOOT_PIN_CTRL_OFFSET                                               0XFF5E0250
+#undef CRL_APB_BOOT_PIN_CTRL_OFFSET 
+#define CRL_APB_BOOT_PIN_CTRL_OFFSET                                               0XFF5E0250
+#undef CRL_APB_BOOT_PIN_CTRL_OFFSET 
+#define CRL_APB_BOOT_PIN_CTRL_OFFSET                                               0XFF5E0250
 
 /*
 * Display Port block level reset (includes DPDMA)
@@ -34807,6 +34809,69 @@
 #define IOU_SCNTRS_COUNTER_CONTROL_REGISTER_EN_DEFVAL          0x00000000
 #define IOU_SCNTRS_COUNTER_CONTROL_REGISTER_EN_SHIFT           0
 #define IOU_SCNTRS_COUNTER_CONTROL_REGISTER_EN_MASK            0x00000001U
+
+/*
+* Value driven onto the mode pins, when out_en = 1
+*/
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_DEFVAL 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_SHIFT 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_MASK 
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_DEFVAL                   0x00000000
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_SHIFT                    8
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_MASK                     0x00000F00U
+
+/*
+* When 0, the pins will be inputs from the board to the PS. When 1, the PS
+    *  will drive these pins
+*/
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_DEFVAL 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_SHIFT 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_MASK 
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_DEFVAL                    0x00000000
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_SHIFT                     0
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_MASK                      0x0000000FU
+
+/*
+* Value driven onto the mode pins, when out_en = 1
+*/
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_DEFVAL 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_SHIFT 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_MASK 
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_DEFVAL                   0x00000000
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_SHIFT                    8
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_MASK                     0x00000F00U
+
+/*
+* When 0, the pins will be inputs from the board to the PS. When 1, the PS
+    *  will drive these pins
+*/
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_DEFVAL 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_SHIFT 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_MASK 
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_DEFVAL                    0x00000000
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_SHIFT                     0
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_MASK                      0x0000000FU
+
+/*
+* Value driven onto the mode pins, when out_en = 1
+*/
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_DEFVAL 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_SHIFT 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_VAL_MASK 
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_DEFVAL                   0x00000000
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_SHIFT                    8
+#define CRL_APB_BOOT_PIN_CTRL_OUT_VAL_MASK                     0x00000F00U
+
+/*
+* When 0, the pins will be inputs from the board to the PS. When 1, the PS
+    *  will drive these pins
+*/
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_DEFVAL 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_SHIFT 
+#undef CRL_APB_BOOT_PIN_CTRL_OUT_EN_MASK 
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_DEFVAL                    0x00000000
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_SHIFT                     0
+#define CRL_APB_BOOT_PIN_CTRL_OUT_EN_MASK                      0x0000000FU
 #undef FPD_SLCR_SECURE_SLCR_DPDMA_OFFSET 
 #define FPD_SLCR_SECURE_SLCR_DPDMA_OFFSET                                          0XFD690040
 #undef FPD_SLCR_SECURE_SLCR_PCIE_OFFSET 
