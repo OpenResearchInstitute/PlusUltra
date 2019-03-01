@@ -1484,16 +1484,16 @@
           "zynq_ultra_ps_e_0/GPIO_0"
         ]
       },
-      "ps8_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "axi_uart16550_0/S_AXI",
-          "ps8_0_axi_periph/M00_AXI"
-        ]
-      },
       "zynq_ultra_ps_e_0_M_AXI_HPM0_LPD": {
         "interface_ports": [
           "ps8_0_axi_periph/S00_AXI",
           "zynq_ultra_ps_e_0/M_AXI_HPM0_LPD"
+        ]
+      },
+      "ps8_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "axi_uart16550_0/S_AXI",
+          "ps8_0_axi_periph/M00_AXI"
         ]
       }
     },
