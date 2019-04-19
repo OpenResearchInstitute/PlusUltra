@@ -7,9 +7,16 @@ Right now, the changes from the original Xilinx Ultra96 BSP image are:
 * Applied the Xilinx fix for the power button not turning the machine off (AR71722)
 * Add sshd, Python3, SWIG, Sqlite, VFIO
 * Remove a bunch of demo software
-* Coming soon: fan speed control! This thing is way too loud.
-* Coming soon: make this into a platform for SDSoC (if I can figure it out)
+* Coming soon: [fan speed control](https://www.hackster.io/andycap/ultra96-fan-control-21fb8b)! This thing is way too loud.
+* Coming soon: make this into a platform for SDSoC. [A great article on this subject has been
+   published by Anuj Vaishnav recently](https://www.hackster.io/anujvaishnav20/building-custom-sdsoc-platform-with-petalinux-268bfd), which should make this quite achievable.
 * Coming soon: Binaries, so anybody can try this out without 10s of GB of downloads, hours of computation and gobs of disk space.
+
+This is built with the 2018.2 versions of Vivado as well as PetaLinux. There is a branch for
+migration to 2018.3, but I put this on hold for the time being. It appears that the support
+for SDSoC is a lot more mature with 2018.2. The only known deficiency for now is the 
+inability of the included UBoot version to write its environment into a disk file. For 
+the moment, I can live with this.
 
 # What's with the name?
 PlusUltra is the negation of "Non plus ultra" (which means for "Nothing further beyond"). It is also the national motto of Spain.
