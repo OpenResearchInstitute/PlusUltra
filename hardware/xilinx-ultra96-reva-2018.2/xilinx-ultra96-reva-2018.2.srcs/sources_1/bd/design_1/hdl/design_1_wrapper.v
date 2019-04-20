@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Tue Feb  5 01:13:27 2019
+//Date        : Fri Apr 19 00:30:42 2019
 //Host        : whitebox running 64-bit Linux Mint 18.3 Sylvia
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -12,6 +12,7 @@
 module design_1_wrapper
    (BT_ctsn,
     BT_rtsn,
+    FAN_PWM,
     GPIO_SENSORS_tri_io,
     UART0_ctsn,
     UART0_rtsn,
@@ -19,6 +20,7 @@ module design_1_wrapper
     UART0_txd);
   input BT_ctsn;
   output BT_rtsn;
+  output FAN_PWM;
   inout [5:0]GPIO_SENSORS_tri_io;
   input UART0_ctsn;
   output UART0_rtsn;
@@ -27,6 +29,7 @@ module design_1_wrapper
 
   wire BT_ctsn;
   wire BT_rtsn;
+  wire FAN_PWM;
   wire [0:0]GPIO_SENSORS_tri_i_0;
   wire [1:1]GPIO_SENSORS_tri_i_1;
   wire [2:2]GPIO_SENSORS_tri_i_2;
@@ -89,6 +92,7 @@ module design_1_wrapper
   design_1 design_1_i
        (.BT_ctsn(BT_ctsn),
         .BT_rtsn(BT_rtsn),
+        .FAN_PWM(FAN_PWM),
         .GPIO_SENSORS_tri_i({GPIO_SENSORS_tri_i_5,GPIO_SENSORS_tri_i_4,GPIO_SENSORS_tri_i_3,GPIO_SENSORS_tri_i_2,GPIO_SENSORS_tri_i_1,GPIO_SENSORS_tri_i_0}),
         .GPIO_SENSORS_tri_o({GPIO_SENSORS_tri_o_5,GPIO_SENSORS_tri_o_4,GPIO_SENSORS_tri_o_3,GPIO_SENSORS_tri_o_2,GPIO_SENSORS_tri_o_1,GPIO_SENSORS_tri_o_0}),
         .GPIO_SENSORS_tri_t({GPIO_SENSORS_tri_t_5,GPIO_SENSORS_tri_t_4,GPIO_SENSORS_tri_t_3,GPIO_SENSORS_tri_t_2,GPIO_SENSORS_tri_t_1,GPIO_SENSORS_tri_t_0}),

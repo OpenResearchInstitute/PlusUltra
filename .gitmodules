@@ -1,0 +1,3 @@
+[submodule "hardware/Ultra96FanControl"]
+	path = hardware/Ultra96FanControl
+	url = https://github.com/AndrewCapon/Ultra96FanControl
