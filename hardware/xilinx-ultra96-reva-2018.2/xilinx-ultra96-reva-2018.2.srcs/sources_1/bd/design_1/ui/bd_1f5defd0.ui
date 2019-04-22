@@ -2,51 +2,64 @@
    ExpandedHierarchyInLayout: "",
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
 #  -string -flagsOSRD
-preplace port GPIO_SENSORS -pg 1 -y 110 -defaultsOSRD
-preplace port UART0_txd -pg 1 -y 470 -defaultsOSRD
-preplace port UART0_rtsn -pg 1 -y 430 -defaultsOSRD
-preplace port BT_ctsn -pg 1 -y 500 -defaultsOSRD
-preplace port FAN_PWM -pg 1 -y 650 -defaultsOSRD
-preplace port UART0_rxd -pg 1 -y 480 -defaultsOSRD
-preplace port BT_rtsn -pg 1 -y 170 -defaultsOSRD
-preplace port UART0_ctsn -pg 1 -y 20 -defaultsOSRD
-preplace inst ps8_0_axi_periph -pg 1 -lvl 4 -y 420 -defaultsOSRD
-preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -y 180 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 3 -y 790 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 2 -y 200 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 3 -y 890 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 360 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 390 -defaultsOSRD
-preplace inst Ultra96_fan_control_0 -pg 1 -lvl 5 -y 650 -defaultsOSRD
-preplace inst axi_uart16550_0 -pg 1 -lvl 5 -y 440 -defaultsOSRD
-preplace inst system_management_wiz_0 -pg 1 -lvl 4 -y 840 -defaultsOSRD
-preplace netloc sin_1 1 0 6 NJ 480 NJ 480 NJ 480 1270J 280 1680J 550 1940
-preplace netloc clk_wiz_0_locked 1 1 1 N
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 20 260 NJ 260 600J 330 1240
-preplace netloc system_management_wiz_0_eoc_out 1 3 2 1310 1010 1670
-preplace netloc zynq_ultra_ps_e_0_GPIO_0 1 3 3 NJ 110 NJ 110 NJ
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 3 1 1290
-preplace netloc util_vector_logic_0_Res 1 3 1 NJ
+preplace port GPIO_SENSORS -pg 1 -y 1040 -defaultsOSRD
+preplace port UART0_txd -pg 1 -y 930 -defaultsOSRD
+preplace port UART0_rtsn -pg 1 -y 890 -defaultsOSRD
+preplace port BT_ctsn -pg 1 -y 1310 -defaultsOSRD
+preplace port FAN_PWM -pg 1 -y 1440 -defaultsOSRD
+preplace port UART0_rxd -pg 1 -y 1350 -defaultsOSRD
+preplace port BT_rtsn -pg 1 -y 1020 -defaultsOSRD
+preplace port UART0_ctsn -pg 1 -y 1330 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 4 -y 880 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -y 1110 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 1580 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -y 1400 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -y 1680 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 100 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 2 -y 1210 -defaultsOSRD
+preplace inst proc_sys_reset_2 -pg 1 -lvl 2 -y 280 -defaultsOSRD
+preplace inst proc_sys_reset_3 -pg 1 -lvl 2 -y 460 -defaultsOSRD
+preplace inst proc_sys_reset_4 -pg 1 -lvl 2 -y 640 -defaultsOSRD
+preplace inst proc_sys_reset_5 -pg 1 -lvl 2 -y 820 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 570 -defaultsOSRD
+preplace inst Ultra96_fan_control_0 -pg 1 -lvl 5 -y 1440 -defaultsOSRD
+preplace inst axi_uart16550_0 -pg 1 -lvl 5 -y 900 -defaultsOSRD
+preplace inst proc_sys_reset_6 -pg 1 -lvl 2 -y 1000 -defaultsOSRD
+preplace inst system_management_wiz_0 -pg 1 -lvl 4 -y 1610 -defaultsOSRD
+preplace netloc clk_wiz_0_clk_out6 1 1 1 240
+preplace netloc sin_1 1 0 6 30J 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 2030
+preplace netloc clk_wiz_0_clk_out7 1 1 1 230
+preplace netloc clk_wiz_0_locked 1 1 1 280
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 30 1100 NJ 1100 670J 960 1330
+preplace netloc system_management_wiz_0_eoc_out 1 3 2 1380 1780 1740
+preplace netloc zynq_ultra_ps_e_0_GPIO_0 1 3 3 NJ 1040 NJ 1040 NJ
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 3 1 1340
+preplace netloc ARESETN_1 1 2 2 650J 840 N
+preplace netloc util_vector_logic_0_Res 1 3 1 1340J
 preplace netloc axi_uart16550_0_sout 1 5 1 NJ
-preplace netloc axi_uart16550_0_ip2intc_irpt 1 2 4 620 30 NJ 30 NJ 30 1950
-preplace netloc system_management_wiz_0_do_out 1 3 2 1300 650 NJ
+preplace netloc axi_uart16550_0_ip2intc_irpt 1 2 4 690 950 1380J 1020 NJ 1020 2020
+preplace netloc system_management_wiz_0_do_out 1 3 2 1370 1440 N
 preplace netloc Ultra96_fan_control_0_pwm_out 1 5 1 NJ
-preplace netloc ps8_0_axi_periph_M01_AXI 1 4 1 1650
-preplace netloc proc_sys_reset_0_interconnect_aresetn 1 2 2 NJ 380 N
-preplace netloc xlconcat_0_dout 1 2 1 NJ
-preplace netloc xlconstant_0_dout 1 3 1 1250J
+preplace netloc ps8_0_axi_periph_M01_AXI 1 4 1 1740
+preplace netloc xlconcat_0_dout 1 2 1 690J
+preplace netloc xlconstant_0_dout 1 3 1 NJ
 preplace netloc ps8_0_axi_periph_M00_AXI 1 4 1 N
-preplace netloc clk_wiz_0_clk_out1 1 1 4 240 470 610 510 1280 660 1670
-preplace netloc emio_uart0_ctsn_1 1 0 4 NJ 500 NJ 500 NJ 500 1260
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 4 30 320 230 460 NJ 460 1250
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 3 600 520 1290 670 1660
+preplace netloc clk_wiz_0_clk_out1 1 1 4 250 1110 660 930 1360 740 1750
+preplace netloc emio_uart0_ctsn_1 1 0 4 NJ 1310 NJ 1310 NJ 1310 1320
+preplace netloc clk_wiz_0_clk_out2 1 1 1 250
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 4 20 700 260 1330 NJ 1330 1310
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 3 680 940 1350 1030 1720
+preplace netloc clk_wiz_0_clk_out3 1 1 1 270
 preplace netloc axi_uart16550_0_rtsn 1 5 1 NJ
-preplace netloc system_management_wiz_0_user_temp_alarm_out 1 4 1 1680
-preplace netloc zynq_ultra_ps_e_0_emio_uart0_rtsn 1 3 3 NJ 170 NJ 170 NJ
-preplace netloc UART0_ctsn 1 0 6 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 1960
-levelinfo -pg 1 0 130 420 930 1480 1810 1980 -top 0 -bot 1020
+preplace netloc clk_wiz_0_clk_out4 1 1 1 290
+preplace netloc clk_wiz_0_clk_out5 1 1 1 270
+preplace netloc system_management_wiz_0_user_temp_alarm_out 1 4 1 1760
+preplace netloc zynq_ultra_ps_e_0_emio_uart0_rtsn 1 3 3 NJ 1100 1730J 1030 2050J
+preplace netloc UART0_ctsn 1 0 6 20J 1320 NJ 1320 NJ 1320 NJ 1320 NJ 1320 2040
+levelinfo -pg 1 0 130 470 1000 1550 1890 2070 -top 0 -bot 1790
 ",
 }
 {
    da_axi4_cnt: "1",
+   da_clkrst_cnt: "6",
 }
