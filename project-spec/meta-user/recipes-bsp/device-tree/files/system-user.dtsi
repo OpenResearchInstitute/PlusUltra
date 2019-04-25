@@ -2,3 +2,9 @@
 /include/ "openamp-overlay.dtsi"
 /{
 };
+
+/{
+    xlnk {
+    compatible = "xlnx,xlnk-1.0";
+    };
+};
