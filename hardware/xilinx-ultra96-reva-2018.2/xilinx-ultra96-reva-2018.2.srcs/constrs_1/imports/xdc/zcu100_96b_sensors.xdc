@@ -39,4 +39,7 @@ set_property PACKAGE_PIN B5 [get_ports BT_rtsn]
 # Fan control
 set_property PACKAGE_PIN F4 [get_ports FAN_PWM]
 set_property BITSTREAM.CONFIG.OVERTEMPSHUTDOWN ENABLE [current_design]
+set_property BITSTREAM.GENERAL.JTAG_SYSMON DISABLE [current_design]
 set_property IOSTANDARD LVCMOS12 [get_ports FAN_PWM]
+
+set_property SLEW SLOW [get_ports FAN_PWM]

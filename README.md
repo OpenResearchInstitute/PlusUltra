@@ -4,6 +4,20 @@ This repository contains a Petalinux project (hardware and software) for the Avn
 Right now, the changes from the original Xilinx Ultra96 BSP image are (newest changes
 on top):
 
+* Disabled fan speed control for the time being, as this version
+  of the design turned out to be very unstable, particularly with
+  active JTAG. Random crashes (particularly at U-Boot prompt) before
+  Linux is up. Once the Linux kernel has started, I see random hardware
+  problems popping up after a few hours, mostly related to 
+  interrupts not reacting. mmc, bluetooth and others. My attempts at
+  troubleshooting this were not successful. 
+
+  Worked around this for now by removing the System Management 
+  Wizard and hardwiring the temperature input of the fan control
+  to *super hot*. At some point I need to take another look 
+  at this. Preferably after reading the sections on the DRP and the 
+  Sysmon interface in UG580, as well as Sysmon sequence modes in 
+  UG1085.
 * Added [Fan speed control](https://www.hackster.io/andycap/ultra96-fan-control-21fb8b)!
  This makes the Ultra96 a much better workbench buddy. The implementation is all
  in hardware, so it doesn't rely on a particular driver. It keeps the chip temperature
