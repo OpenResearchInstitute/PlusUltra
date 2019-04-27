@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Find the project path by searching upward
+current=`pwd`
+IFS=/; dn=($current); ct=${#dn[@]}
+subd=$current
+for((i=0; i<ct; i++)); do
+  subd+=/..
+  ret=$(find "$subd" -maxdepth 1 -type d -name .petalinux)
+  if [[ -n $ret ]]; then 
+    project=$(realpath "$subd")
+    break
+  fi
+done
+
+# Now create the boot directory and copy files
+images=$project/images/linux
+cd $images
+mkdir -p boot
+cp u-boot.elf bl31.elf pmufw.elf boot/
+cp *fsbl.elf boot/fsbl.elf
+mkdir -p image
+cp image.ub image/
+
+# create the BIF file
+cat <<BIFfile > PlusUltra.bif
+the_ROM_image:
+{
+    [fsbl_config] a53_x64
+    [bootloader]<fsbl.elf>
+    [pmufw_image]<pmufw.elf>
+    [destination_device=pl] <bitstream>
+    [destination_cpu=a53-0, exception_level=el-3, trustzone] <bl31.elf>
+    [destination_cpu=a53-0, exception_level=el-2] <u-boot.elf>
+}
+BIFfile
