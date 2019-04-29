@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Find the project path by searching upward
+current=`pwd`
+IFS=/; dn=($current); ct=${#dn[@]}
+subd=$current
+for((i=0; i<ct; i++)); do
+  subd+=/..
+  ret=$(find "$subd" -maxdepth 1 -type d -name .petalinux)
+  if [[ -n $ret ]]; then 
+    project=$(realpath "$subd")
+    break
+  fi
+done
+
+cd "$project/images/linux"
+petalinux-package --boot --force --fsbl zynqmp_fsbl.elf --fpga system.bit --u-boot --pmufw pmufw.elf

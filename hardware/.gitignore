@@ -89,10 +89,10 @@ xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.cache/
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.runs/
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.hw/
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.ip_user_files/
-xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/design_1/hdl/
-xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/design_1/ip/**/*.v
-xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/design_1/ip/**/*.vhd
-xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/design_1/sim/
-xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/design_1/synth/
-xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/design_1/ipshared/
-xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/design_1/hw_handoff/
+xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/hdl/
+xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/ip/**/*.v
+xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/ip/**/*.vhd
+xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/sim/
+xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/synth/
+xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/ipshared/
+xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/hw_handoff/
