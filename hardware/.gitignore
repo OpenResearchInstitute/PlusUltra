@@ -84,7 +84,7 @@
 !*.elf
 !*.bmm
 !*.xmp
- # Specific directories
+# Specific directories
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.cache/
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.runs/
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.hw/
@@ -96,3 +96,16 @@ xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltr
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/synth/
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/ipshared/
 xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.srcs/sources_1/bd/PlusUltra/hw_handoff/
+PlusUltra/PlusUltra.cache/
+PlusUltra/PlusUltra.runs/
+PlusUltra/PlusUltra.hw/
+PlusUltra/PlusUltra.ip_user_files/
+PlusUltra/PlusUltra.srcs/sources_1/bd/PlusUltra/hdl/
+PlusUltra/PlusUltra.srcs/sources_1/bd/PlusUltra/ip/**/*.v
+PlusUltra/PlusUltra.srcs/sources_1/bd/PlusUltra/ip/**/*.vhd
+PlusUltra/PlusUltra.srcs/sources_1/bd/PlusUltra/sim/
+PlusUltra/PlusUltra.srcs/sources_1/bd/PlusUltra/synth/
+PlusUltra/PlusUltra.srcs/sources_1/bd/PlusUltra/ipshared/
+PlusUltra/PlusUltra.srcs/sources_1/bd/PlusUltra/hw_handoff/
+!*.dsa
+

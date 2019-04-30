@@ -57,6 +57,12 @@ make sure you clone this repository using the `--recursive` git option, as this 
 ### Building the hardware project
 You need Xilinx Vivado 2018.2 for this part. Open the project `hardware/xilinx-ultra96-reva-2018.2/xilinx-ultra96-reva-2018.2.xpr`, and make any changes you desire. Build the bitstream. If it is successful, you want to export the hardware definition to the default location (make sure to check the checkbox to include the bitfile). Then you can proceed to build a matching software image.
 
+Type the following into Vivado's tcl console:
+
+```
+write_dsa -force -include_bit ./hardware/PlusUltra/PlusUltra.sdk/PlusUltra.dsa
+```
+
 ### Building the software
 You will need an installation of Petalinux 2018.2 from Xilinx (please note that this needs to be installed on a Linux machine). Refer to the Xilinx documentation on how to do this, specifically [chapter 2 of UG1144](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_2/ug1144-petalinux-tools-reference-guide.pdf#G4.364401), which lists the installation requirements.
 Please make sure you are not building this on an ecryptfs file system, as path length restrictions will probably trip you up!
@@ -79,6 +85,9 @@ You will want to copy the build products `image.ub` and `BOOT.bin` to the FAT32 
 
 ## Booting and playing around.
 Insert the SD card into your Ultra96 board and power it up. If you have a console connected to the console connector, you should see the boot progressing. Either way, you should be able to connect the board the same way that you connected to it with the out-of-the-box image.
+
+## Building a platform for SDSoC
+Run 'tools\makeBootfolder` to create the 3 components required to build an SDSoC platform.
 
 ## Contributing to this effort
 Congratulations, you are now running your first home-baked hardware and software image! If you find anything wrong or broken, please submit an issue, or make it better by sending a pull-request with your improvments. Even if you have never done it before. *Especially* if you have never done it before! Don't worry about "doing it right", we can figure it out together. 

@@ -8,22 +8,21 @@ for((i=0; i<ct; i++)); do
   subd+=/..
   ret=$(find "$subd" -maxdepth 1 -type d -name .petalinux)
   if [[ -n $ret ]]; then 
-    project=$(realpath "$subd")
     break
   fi
 done
 
 # Now create the boot directory and copy files
-images=$project/images/linux
-cd $images
-mkdir -p boot
-cp u-boot.elf bl31.elf pmufw.elf boot/
-cp *fsbl.elf boot/fsbl.elf
-mkdir -p image
-cp image.ub image/
+images="$subd/images/linux"
+cd "$images"
+mkdir -p "${images}/boot"
+cp u-boot.elf bl31.elf pmufw.elf "$images/boot/"
+cp *fsbl.elf "$images/boot/fsbl.elf"
+mkdir -p "$images/image"
+cp image.ub "$images/image/"
 
 # create the BIF file
-cat <<BIFfile > PlusUltra.bif
+cat <<BIFfile > "$images/PlusUltra.bif"
 the_ROM_image:
 {
     [fsbl_config] a53_x64
