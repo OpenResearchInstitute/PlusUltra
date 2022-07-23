@@ -20,7 +20,7 @@
         <spirit:abstractionType spirit:library="interface" spirit:name="gpio_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>DATA.FAN_PWM</spirit:name>
+        <spirit:name>DATA.UART0_CTSN</spirit:name>
         <spirit:displayName>Data</spirit:displayName>
         <spirit:description>Data</spirit:description>
         <spirit:busType spirit:library="signal" spirit:name="data" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -32,7 +32,7 @@
               <spirit:name>DATA</spirit:name>
             </spirit:logicalPort>
             <spirit:physicalPort>
-              <spirit:name>FAN_PWM</spirit:name>
+              <spirit:name>UART0_ctsn</spirit:name>
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
@@ -49,7 +49,7 @@
         </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>DATA.UART0_CTSN</spirit:name>
+        <spirit:name>DATA.FAN_PWM</spirit:name>
         <spirit:displayName>Data</spirit:displayName>
         <spirit:description>Data</spirit:description>
         <spirit:busType spirit:library="signal" spirit:name="data" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -61,7 +61,7 @@
               <spirit:name>DATA</spirit:name>
             </spirit:logicalPort>
             <spirit:physicalPort>
-              <spirit:name>UART0_ctsn</spirit:name>
+              <spirit:name>FAN_PWM</spirit:name>
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
@@ -117,15 +117,9 @@
       </spirit:views>
       <spirit:ports>
         <spirit:port>
-          <spirit:name>BT_ctsn</spirit:name>
+          <spirit:name>UART0_ctsn</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>BT_rtsn</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
@@ -139,15 +133,21 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>UART0_ctsn</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>UART0_rtsn</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>UART0_txd</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>BT_ctsn</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
@@ -157,7 +157,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>UART0_txd</spirit:name>
+          <spirit:name>BT_rtsn</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
@@ -177,108 +177,6 @@
         <spirit:componentRef spirit:library="user" spirit:name="Ultra96_fan_control" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_Ultra96_fan_control_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>axi_uart16550_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_uart16550" spirit:vendor="xilinx.com" spirit:version="2.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_axi_uart16550_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>clk_wiz_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="6.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_clk_wiz_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">7</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">75</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_REQUESTED_OUT_FREQ">150</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_REQUESTED_OUT_FREQ">200</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_REQUESTED_OUT_FREQ">300</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_REQUESTED_OUT_FREQ">400</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_REQUESTED_OUT_FREQ">600</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="RESET_PORT">resetn</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">16.000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">12</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT2_DIVIDE">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT3_DIVIDE">6</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT4_DIVIDE">4</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT5_DIVIDE">3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT6_DIVIDE">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="RESET_TYPE">ACTIVE_LOW</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">122.158</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">115.831</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">87.180</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_JITTER">107.567</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_PHASE_ERROR">87.180</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_JITTER">102.086</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_PHASE_ERROR">87.180</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_JITTER">94.862</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_PHASE_ERROR">87.180</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_JITTER">90.074</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_PHASE_ERROR">87.180</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_JITTER">83.768</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_PHASE_ERROR">87.180</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-        <bd:pfms>
-          <bd:pfm bd:name="CLOCK" bd:value="clk_out1 {id &quot;4&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_0&quot;} clk_out2 {id &quot;5&quot; is_default &quot;true&quot; proc_sys_reset &quot;/proc_sys_reset_1&quot;} clk_out3 {id &quot;6&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_2&quot;} clk_out4 {id &quot;7&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_3&quot;} clk_out5 {id &quot;8&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_4&quot;} clk_out6 {id &quot;9&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_5&quot;} clk_out7 {id &quot;10&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_6&quot;}"/>
-        </bd:pfms>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_1_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_2</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_2_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_3</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_3_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_4</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_4_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_5</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_5_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_6</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_6_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -1437,6 +1335,108 @@
           <bd:pfm bd:name="AXI_PORT" bd:value="M_AXI_HPM0_FPD {memport &quot;M_AXI_GP&quot; sptag &quot;&quot; memory &quot;&quot;} M_AXI_HPM1_FPD {memport &quot;M_AXI_GP&quot; sptag &quot;&quot; memory &quot;&quot;} S_AXI_HPC0_FPD {memport &quot;S_AXI_HPC&quot; sptag &quot;&quot; memory &quot;&quot;} S_AXI_HPC1_FPD {memport &quot;S_AXI_HPC&quot; sptag &quot;&quot; memory &quot;&quot;} S_AXI_HP0_FPD {memport &quot;S_AXI_HP&quot; sptag &quot;&quot; memory &quot;&quot;} S_AXI_HP1_FPD {memport &quot;S_AXI_HP&quot; sptag &quot;&quot; memory &quot;&quot;} S_AXI_HP2_FPD {memport &quot;S_AXI_HP&quot; sptag &quot;&quot; memory &quot;&quot;} S_AXI_HP3_FPD {memport &quot;S_AXI_HP&quot; sptag &quot;&quot; memory &quot;&quot;}"/>
         </bd:pfms>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>axi_uart16550_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_uart16550" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_axi_uart16550_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>clk_wiz_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="6.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_clk_wiz_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">7</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">75</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_REQUESTED_OUT_FREQ">150</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_REQUESTED_OUT_FREQ">200</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_REQUESTED_OUT_FREQ">300</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_REQUESTED_OUT_FREQ">400</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_REQUESTED_OUT_FREQ">600</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="RESET_PORT">resetn</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">16.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT2_DIVIDE">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT3_DIVIDE">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT4_DIVIDE">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT5_DIVIDE">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT6_DIVIDE">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="RESET_TYPE">ACTIVE_LOW</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">122.158</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">115.831</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">87.180</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_JITTER">107.567</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_PHASE_ERROR">87.180</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_JITTER">102.086</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_PHASE_ERROR">87.180</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_JITTER">94.862</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_PHASE_ERROR">87.180</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_JITTER">90.074</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_PHASE_ERROR">87.180</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_JITTER">83.768</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_PHASE_ERROR">87.180</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+        <bd:pfms>
+          <bd:pfm bd:name="CLOCK" bd:value="clk_out1 {id &quot;4&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_0&quot;} clk_out2 {id &quot;5&quot; is_default &quot;true&quot; proc_sys_reset &quot;/proc_sys_reset_1&quot;} clk_out3 {id &quot;6&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_2&quot;} clk_out4 {id &quot;7&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_3&quot;} clk_out5 {id &quot;8&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_4&quot;} clk_out6 {id &quot;9&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_5&quot;} clk_out7 {id &quot;10&quot; is_default &quot;false&quot; proc_sys_reset &quot;/proc_sys_reset_6&quot;}"/>
+        </bd:pfms>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_1_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_2_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_3</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_3_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_4</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_4_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_5</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_5_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_6</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">PlusUltra_proc_sys_reset_6_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -1490,13 +1490,13 @@
         <spirit:name>clk_wiz_0_clk_out1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out2"/>
         <spirit:internalPortReference spirit:componentRef="Ultra96_fan_control_0" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_1" spirit:portRef="slowest_sync_clk"/>
+        <spirit:internalPortReference spirit:componentRef="zynq_ultra_ps_e_0" spirit:portRef="maxihpm0_lpd_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps8_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps8_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps8_0_axi_periph" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps8_0_axi_periph" spirit:portRef="S00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="zynq_ultra_ps_e_0" spirit:portRef="maxihpm0_lpd_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_1" spirit:portRef="slowest_sync_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out2</spirit:name>
@@ -1548,10 +1548,10 @@
         <spirit:name>proc_sys_reset_0_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_1" spirit:portRef="peripheral_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="Ultra96_fan_control_0" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="ps8_0_axi_periph" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps8_0_axi_periph" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps8_0_axi_periph" spirit:portRef="S00_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sin_1</spirit:name>
